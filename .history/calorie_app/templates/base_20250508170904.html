@@ -1,0 +1,16 @@
+<!-- calorie_tracker/templates/calorie_tracker/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Calorie Tracker{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-xl bg-white p-6 rounded shadow">
+    {% block content %}
+  
+    {% endblock %}
+  </div>
+</body>
+</html>
