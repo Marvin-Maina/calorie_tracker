@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: calorie-tracker
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn calorie_tracker.wsgi:application"
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        value: your-django-secret-key-here
